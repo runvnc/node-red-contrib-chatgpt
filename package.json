@@ -1,6 +1,6 @@
 {
   "name": "@runvnc/node-red-chatgpt-model",
-  "version": "0.5",
+  "version": "1.0",
   "description": "A Node-RED node that interacts with OpenAI machine learning models to generate text and image outputs like 'ChatGPT' and 'DALL·E 2'. With model parameter for gpt4",
   "main": "chatgpt.js",
   "scripts": {

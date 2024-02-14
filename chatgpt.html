@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('chatgpt',{
+    RED.nodes.registerType('chatgpt-model',{
         category: 'ChatGPT',
         color: '#10A37F',
         defaults: {
@@ -15,7 +15,7 @@
         outputs:1,
         icon: "arrow-in.png",
         label: function() {
-            return this.name||"chatgpt";
+            return this.name||"chatgpt-model";
         },
         oneditprepare: function () {
             const node = this;
@@ -90,6 +90,11 @@
                 <span class="property-type">string</span>
             </dt>
             <dd> The topic and node behavior to select.</dd>
+
+            <dt class="optional">msg.model
+                <span class="property-type">string</span>
+            </dt>
+            <dd> The LLM model to use (gpt4 only, e.g. 'gpt-4-turbo-preview').</dd>
 
             <dt class="optional">msg.size
                 <span class="property-type">string</span>

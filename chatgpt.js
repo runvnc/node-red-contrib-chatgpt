@@ -242,7 +242,7 @@ module.exports = (RED) => {
 
                     // Request completion from GPT-4 model
                     const response = await openai.createChatCompletion({
-                        model: "gpt-4",
+                        model: msg.model ? msg.model : "gpt-4",
                         messages: msg.history,
                         temperature: parseInt(msg.temperature) || 1,
                         top_p: parseInt(msg.top_p) || 1,

@@ -342,7 +342,7 @@ module.exports = (RED) => {
     };
 
     // Register the node type with Node-RED
-    RED.nodes.registerType("chatgpt", main, {
+    RED.nodes.registerType("chatgpt-model", main, {
         credentials: {
             API_KEY: {
                 type: "text"

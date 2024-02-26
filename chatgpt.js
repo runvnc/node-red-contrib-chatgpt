@@ -185,7 +185,7 @@ module.exports = (RED) => {
                     const response = await openai.createChatCompletion({
                         model: "gpt-3.5-turbo",
                         messages: msg.history,
-                        temperature: parseInt(msg.temperature) || 1,
+                        temperature: parseInt(msg.temperature) || 0,
                         top_p: parseInt(msg.top_p) || 1,
                         n: parseInt(msg.n) || 1,
                         stream: msg.stream || false,
@@ -244,7 +244,7 @@ module.exports = (RED) => {
                     const response = await openai.createChatCompletion({
                         model: msg.model ? msg.model : "gpt-4",
                         messages: msg.history,
-                        temperature: parseInt(msg.temperature) || 1,
+                        temperature: parseInt(msg.temperature) || 0,
                         top_p: parseInt(msg.top_p) || 1,
                         n: parseInt(msg.n) || 1,
                         stream: msg.stream || false,
